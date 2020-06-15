@@ -7,11 +7,11 @@ access_key_name = "access_key_id"
 secret_key_name = "secret_key_id"
 
 # checks if values set to override default
-if 'GITHUB_ACCESS_KEY_NAME' in os.environ:
-    access_key_name = os.environ['GITHUB_ACCESS_KEY_NAME']
+if 'AWS_ACCESS_KEY_ID' in os.environ:
+    access_key_name = os.environ['AWS_ACCESS_KEY_ID']
 
-if 'GITHUB_SECRET_KEY_NAME' in os.environ:
-    secret_key_name = os.environ['GITHUB_SECRET_KEY_NAME']
+if 'AWS_SECRET_ACCESS_KEY' in os.environ:
+    secret_key_name = os.environ['AWS_SECRET_ACCESS_KEY']
 
 # sets creds for boto3
 iam = boto3.client(
